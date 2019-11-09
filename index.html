@@ -14,10 +14,14 @@
         </form>
         <a href="./amor.jpeg" id="amor" download="Nossa foto"></a>
         <a href="./dudu.jpeg" id="dudu" download="Bota no splitwise"></a>
+        <a href="./amadeus.jpeg" id="amadeus"></a>
+        <span id="error"></span>
     </body>
     <script>
         let amor = document.getElementById("amor");
         let dudu = document.getElementById("dudu");
+        let amadeus = document.getElementById("amadeus");
+        let error = document.getElementById("error");
         function sub(){
             let user = document.getElementById("user").value;
             let passwd = document.getElementById("passwd").value;
@@ -25,7 +29,11 @@
                 amor.click();
             }else if(user === "Hoes" && passwd === "splitwise"){
                 dudu.click();
-            }       
+            }else if(user === "Amadeus" && passwd === "edupravida"){
+                amadeus.click();
+            }else{
+                error.innerHTML = "Wrong user or password";
+            }   
         }
     </script>
 </html>

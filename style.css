@@ -13,6 +13,9 @@ body{
     border: none;
     border-radius: 25px;
 }
+#error{
+    visibility: hidden;
+}
 .login h1{
     color: white;
     font-weight: 500;
