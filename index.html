@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="style.css">
+    <head>
+        <meta charset="utf-8">
+        <title>Login</title>
+    </head>
+    <body>
+        <form name="login" class="login" onsubmit="return sub()">
+            <h1>LOGIN</h1>
+            <input type="text" id="user" placeholder="Username" required>
+            <input type="password" id="passwd" placeholder="Password" required>
+            <input type="submit" value="Login">
+        </form>
+        <a href="./amor.jpeg" id="amor" download="Nossa foto"></a>
+        <a href="./dudu.jpeg" id="dudu" download="Bota no splitwise"></a>
+    </body>
+    <script>
+        let amor = document.getElementById("amor");
+        let dudu = document.getElementById("dudu");
+        function sub(){
+            let user = document.getElementById("user").value;
+            let passwd = document.getElementById("passwd").value;
+            if(user === "Ana" && passwd == "21012019"){
+                amor.click();
+            }else if(user === "Hoes" && passwd === "splitwise"){
+                dudu.click();
+            }       
+        }
+    </script>
+</html>
