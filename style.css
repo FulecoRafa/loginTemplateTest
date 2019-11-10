@@ -12,10 +12,9 @@ body{
     text-align: center;
     border: none;
     border-radius: 25px;
+    transition: 0.5s;
 }
-#error{
-    visibility: hidden;
-}
+
 .login h1{
     color: white;
     font-weight: 500;
@@ -50,4 +49,10 @@ body{
 }
 .login input[type = "submit"]:hover{
     background-color: green;
+}
+#error{
+    color: rgb(255, 0, 98);
+}
+.incorrect{
+    border: 2px solid red;
 }

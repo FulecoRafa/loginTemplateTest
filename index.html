@@ -1,39 +1,50 @@
 <!DOCTYPE html>
 <html>
-    <link rel="stylesheet" href="style.css">
-    <head>
-        <meta charset="utf-8">
-        <title>Login</title>
-    </head>
-    <body>
-        <form name="login" class="login" onsubmit="return sub()">
-            <h1>LOGIN</h1>
-            <input type="text" id="user" placeholder="Username" required>
-            <input type="password" id="passwd" placeholder="Password" required>
-            <input type="submit" value="Login">
-        </form>
-        <a href="./amor.jpeg" id="amor" download="Nossa foto"></a>
-        <a href="./dudu.jpeg" id="dudu" download="Bota no splitwise"></a>
-        <a href="./amadeus.jpeg" id="amadeus"></a>
-        <span id="error"></span>
-    </body>
-    <script>
-        let amor = document.getElementById("amor");
-        let dudu = document.getElementById("dudu");
-        let amadeus = document.getElementById("amadeus");
-        let error = document.getElementById("error");
-        function sub(){
-            let user = document.getElementById("user").value;
-            let passwd = document.getElementById("passwd").value;
-            if(user === "Ana" && passwd == "21012019"){
-                amor.click();
-            }else if(user === "Hoes" && passwd === "splitwise"){
-                dudu.click();
-            }else if(user === "Amadeus" && passwd === "edupravida"){
-                amadeus.click();
-            }else{
-                error.innerHTML = "Wrong user or password";
-            }   
+<link rel="stylesheet" href="style.css">
+
+<head>
+    <meta charset="utf-8">
+    <title>Login</title>
+</head>
+
+<body>
+    <form id="login" class="login" onsubmit="sub();return false">
+        <h1>LOGIN</h1>
+        <input type="text" id="user" placeholder="Username" required>
+        <input type="password" id="passwd" placeholder="Password" required>
+        <input type="submit" id="submit" value="Login">
+        <p id="error"></p>
+    </form>
+    <a href="./amor.jpeg" id="amor" download="Nossa foto"></a>
+    <a href="./dudu.jpeg" id="dudu" download="Bota no splitwise"></a>
+    <a href="./amadeus.jpeg" id="amadeus"></a>
+</body>
+<script>
+    let amor = document.getElementById("amor");
+    let dudu = document.getElementById("dudu");
+    let amadeus = document.getElementById("amadeus");
+    let box = document.getElementById("login");
+    let error = document.getElementById("error");
+
+
+    function sub() {
+        let user = document.getElementById("user").value;
+        let passwd = document.getElementById("passwd").value;
+        if (user === "Ana" && passwd == "21012019") {
+            amor.click();
+            error.innerHTML = "";
+        } else if (user === "Hoes" && passwd === "splitwise") {
+            dudu.click();
+            error.innerHTML = "";
+        } else if (user === "Amadeus" && passwd === "edupravida") {
+            amadeus.click();
+            error.innerHTML = "";
+        } else {
+            error.innerHTML = "Wrong user or password";
+            box.classList.add("incorrect");
         }
-    </script>
+        
+    }
+</script>
+
 </html>
