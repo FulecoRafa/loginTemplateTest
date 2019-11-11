@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+        <script src="https://kit.fontawesome.com/b3eff8b5da.js" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="style.css">
 
 <head>
@@ -10,8 +11,14 @@
 <body>
     <form id="login" class="login" autocomplete="off" onsubmit="sub();return false">
         <h1>LOGIN</h1>
+        <div class="part">
         <input type="text" id="user" placeholder="Username" required>
+        <i class="fas fa-user-tag"></i>
+        </div>
+        <div class="part">
         <input type="password" id="passwd" placeholder="Password" required>
+        <i class="fas fa-lock"></i>
+        </div>
         <input type="submit" id="submit" value="Login">
         <p id="error"></p>
     </form>
@@ -43,7 +50,7 @@
             error.innerHTML = "Wrong user or password";
             box.classList.add("incorrect");
         }
-        
+
     }
 </script>
 
